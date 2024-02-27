@@ -11,9 +11,9 @@ public class BasePage {
 
     public static void setUp(){
         LOG.info("Start test");
-        System.setProperty("webdriver.chrome.driver", "C://Webdrivers/chromedriver121.ece");
+        System.setProperty("webdriver.chrome.driver", "C://Webdrivers/chromedriver121.exe");
         driver = new ChromeDriver();
-        String url = "https://zara,com";
+        String url = "https://www.zara.com/ro/";
         driver.get(url);
 
         LOG.info("Open broswer maximize");
@@ -26,7 +26,7 @@ public class BasePage {
     }
 
     public static String returnBaseUrl(){
-        return "https://zara.com";
+        return "https://www.zara.com/ro/";
     }
     public static String getBaseUrl(){
         String baseurl = returnBaseUrl();
@@ -35,4 +35,14 @@ public class BasePage {
         }
         return baseurl;
     }
+
+    public static void sleep(long ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
