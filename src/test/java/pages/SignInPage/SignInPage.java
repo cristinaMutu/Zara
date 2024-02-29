@@ -19,11 +19,23 @@ public class SignInPage extends BasePage {
         return instance;
     }
 
+    private By acceptcookie = By.id("onetrust-accept-btn-handler");
     private By initiereSesiuneButton = By.xpath("//a[@data-qa-id='header-logon-link']");
     private By enterEmail = By.xpath("//input[@name='logonId']");
     private By enterPassword = By.xpath("//input[@name='password']");
+    private By initiereSesiuneenter = By.xpath("//button[@data-qa-action='logon-form-submit']");
     private By inregistrativa = By.xpath("//section[@class='logon-view__section-info']//div[@class='zds-button__lines-wrapper']");
 
+
+    public void setAcceptcookie(){
+        LOG.info("Click the accept button");
+        driver.findElement(acceptcookie).click();
+    }
+
+    public boolean isinitiereSesiuneButton() {
+        LOG.info("Intiere Sesiune' button is displayed");
+        return driver.findElement(initiereSesiuneButton).isDisplayed();
+    }
 
     public void clickInitiereSesiunebutton() {
         LOG.info("Click 'Initiere sesiune' button");
@@ -38,6 +50,12 @@ public class SignInPage extends BasePage {
     public void typeInInitiereSesiunePasswordField(String password) {
         LOG.info("Typing password in 'Password' field");
         driver.findElement(enterPassword).sendKeys(password);
+    }
+
+    public void clickInitiereSesiuneenter(){
+        LOG.info("Click 'Initiere sesiune' button");
+        driver.findElement(initiereSesiuneenter).click();
+
     }
 
     public void clickInregistrativa() {
