@@ -32,8 +32,8 @@ public class SignInPage extends BasePage {
         driver.findElement(acceptcookie).click();
     }
 
-    public boolean isinitiereSesiuneButton() {
-        LOG.info("Intiere Sesiune' button is displayed");
+    public boolean initiereSesiuneButton() {
+        LOG.info("Initiere Sesiune' button is displayed");
         return driver.findElement(initiereSesiuneButton).isDisplayed();
     }
 

@@ -23,11 +23,13 @@ public class SignInTest extends BaseTest {
         sleep(5000);
 
         LOG.info("Check 'Initiere Sesiune' button");
-        Assert.assertTrue(signInPage.isinitiereSesiuneButton(), "Button is not displayed");
+        Assert.assertTrue(signInPage.initiereSesiuneButton(), "Button is not displayed");
 
 
         LOG.info("Click 'Sign in' button");
         signInPage.clickInitiereSesiunebutton();
+
+        sleep(3000);
 
         LOG.info("Complete the fields");
         signInPage.typeInInitiereSesiuneEmailField(email);
