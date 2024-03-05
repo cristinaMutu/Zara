@@ -37,7 +37,5 @@ public class SignInTest extends BaseTest {
         signInPage.clickInitiereSesiuneenter();
 
 
-        LOG.info("Click 'Inregistrativa' button");
-        signInPage.clickInregistrativa();
     }
 }

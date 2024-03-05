@@ -24,7 +24,7 @@ public class SignInPage extends BasePage {
     private By enterEmail = By.xpath("//input[@name='logonId']");
     private By enterPassword = By.xpath("//input[@name='password']");
     private By initiereSesiuneenter = By.xpath("//button[@data-qa-action='logon-form-submit']");
-    private By inregistrativa = By.xpath("//section[@class='logon-view__section-info']//div[@class='zds-button__lines-wrapper']");
+
 
 
     public void setAcceptcookie(){
@@ -58,10 +58,7 @@ public class SignInPage extends BasePage {
 
     }
 
-    public void clickInregistrativa() {
-        LOG.info("Click 'Inregistrativa' button");
-        driver.findElement(inregistrativa).click();
-    }
+
 
 
 }
