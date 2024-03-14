@@ -37,6 +37,10 @@ public class SignInTest extends BaseTest {
 
         LOG.info("Click 'Initiere Sesiune' button");
         signInPage.clickInitiereSesiuneenter();
+        sleep(3000);
+
+        LOG.info("Initiere Sesiune mesaj OK");
+        Assert.assertTrue(signInPage.initiereSesiuneOK(), "Succes mesage is not displayed");
 
 
     }

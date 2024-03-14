@@ -24,10 +24,10 @@ public class SignInPage extends BasePage {
     private By enterEmail = By.xpath("//input[@name='logonId']");
     private By enterPassword = By.xpath("//input[@name='password']");
     private By initiereSesiuneenter = By.xpath("//button[@data-qa-action='logon-form-submit']");
+    private By confirmationmesage = By.xpath("//span[contains(text(),'pentru a intra din nou')]");
 
 
-
-    public void setAcceptcookie(){
+    public void setAcceptcookie() {
         LOG.info("Click the accept button");
         driver.findElement(acceptcookie).click();
     }
@@ -52,13 +52,16 @@ public class SignInPage extends BasePage {
         driver.findElement(enterPassword).sendKeys(password);
     }
 
-    public void clickInitiereSesiuneenter(){
+    public void clickInitiereSesiuneenter() {
         LOG.info("Click 'Initiere sesiune' button");
         driver.findElement(initiereSesiuneenter).click();
-
     }
 
+    public boolean initiereSesiuneOK() {
+        LOG.info("Initiere Sesiune mesaj OK");
+        return driver.findElement(confirmationmesage).isDisplayed();
 
+    }
 
 
 }

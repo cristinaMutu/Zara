@@ -26,6 +26,35 @@ public class PrincipalButtonTest extends BaseTest {
 
         sleep(3000);
 
+        LOG.info("Select Femei item");
+        principalButtonPage.clickFemeiItem();
+        sleep(2000);
+
+        LOG.info("click Best Sellers");
+        principalButtonPage.clickBestSellers();
+        sleep(4000);
+
+        LOG.info ("click Imagine Size");
+        principalButtonPage.clickImageSize();
+
+        sleep(3000);
+
+        LOG.info("click Rochie Satinata");
+        principalButtonPage.clickRochieSatinata();
+
+        sleep(2000);
+
+        LOG.info("click Marime");
+        principalButtonPage.clickSelectMarime();
+        sleep(2000);
+
+        LOG.info("click 'Adaugare' button");
+        principalButtonPage.clickAdaugareCos();
+
+        sleep(15000);
+
+        LOG.info("click 'Cos' button");
+        principalButtonPage.setClickCosButton();
 
     }
 }
