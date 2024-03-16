@@ -25,7 +25,9 @@ public class PrincipalButtonPage extends BasePage {
     private static By SelectRochieSatinata = By.xpath("//a[@data-qa-action='product-click']/h2[contains(text(),'ROCHIE MINI')]");
     private static By SelectMarime = By.xpath ("//div[text()='XS']");
     private static By AdaugareCos = By.xpath("//button[@data-qa-action='add-to-cart']");
-    private static By clickCosButton = By.xpath ("//a[@data-qa-id='layout-header-go-to-cart']/span");
+    //private static By clickOut = By.xpath("//div[@class='screen-reader-text']");
+    private static By clickCosButton = By.xpath("//a[@data-qa-id='layout-header-go-to-cart']/span");
+    private static By vizualizareCos = By.xpath("//div[text()='ROCHIE MINI SATINATĂ CU IMPRIMEU']");
 
 
     public static boolean isPrincipalButton() {
@@ -68,9 +70,24 @@ public class PrincipalButtonPage extends BasePage {
         driver.findElement(AdaugareCos).click();
     }
 
+   // public void setClickOut() {
+       // LOG.info("Click Out in Meniu Principal");
+       // driver.findElement(clickOut).click();
+   // }
+
+    public void clickBack() {
+        LOG.info("Click back in broswer");
+        driver.navigate().back();
+    }
+
     public void setClickCosButton(){
         LOG.info("Click 'Cos' button");
         driver.findElement(clickCosButton).click();
+    }
+
+    public boolean isVizualizareCosDisplayed(){
+        LOG.info("Is produs in Cos");
+        return driver.findElement(vizualizareCos).isDisplayed();
     }
 
 

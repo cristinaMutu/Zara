@@ -24,7 +24,7 @@ public class RegisterPage extends BasePage {
     private static By enterPassword = By.xpath("//input[@data-qa-input-qualifier='password']");
     private static By enterNume = By.xpath("//input[@data-qa-input-qualifier='firstName']");
     private static By enterNumeFamilie = By.xpath("//input[@data-qa-input-qualifier='lastName']");
-   // private static By enterPrefix = By.xpath("//input[@name='phone.prefix']");
+    // private static By enterPrefix = By.xpath("//input[@name='phone.prefix']");
     private static By enterTelefon = By.xpath("//input[@type='tel']");
     private static By acceptPolitica = By.xpath("//div[@data-name='privacyCheck']//span[@class='zds-checkbox-control']");
     private static By creareCont = By.xpath("//button[@role='button']");
@@ -55,9 +55,9 @@ public class RegisterPage extends BasePage {
         driver.findElement(enterNumeFamilie).sendKeys(numeF);
     }
 
-   // public void typeInPrefixField(String prefix) {
-     //   LOG.info("Typing Prefix in 'Prefix' field");
-      //  driver.findElement(enterPrefix).sendKeys(prefix);
+    // public void typeInPrefixField(String prefix) {
+    //   LOG.info("Typing Prefix in 'Prefix' field");
+    //  driver.findElement(enterPrefix).sendKeys(prefix);
     //}
 
     public void typeInTelefonField(String telefon) {
@@ -65,12 +65,20 @@ public class RegisterPage extends BasePage {
         driver.findElement(enterTelefon).sendKeys(telefon);
     }
 
-    public void setAcceptPolitica (){
+    //public void clickOnAcceptCheckBox() {
+    //LOG.info("Click on Accept Check Box");
+    //  WebElement element = driver.findElement(clickAcceptCheckBox);
+    //((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", element);
+    // ((JavascriptExecutor) driver).executeScript("arguments[0].click()", element);
+//}
+
+
+    public void setAcceptPolitica() {
         LOG.info("Click accept");
         driver.findElement(acceptPolitica).click();
     }
 
-    public void setCreareCont (){
+    public void setCreareCont() {
         LOG.info("Click creare cont");
         driver.findElement(creareCont).click();
     }

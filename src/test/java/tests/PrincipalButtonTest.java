@@ -32,7 +32,7 @@ public class PrincipalButtonTest extends BaseTest {
 
         LOG.info("click Best Sellers");
         principalButtonPage.clickBestSellers();
-        sleep(4000);
+        sleep(2000);
 
         LOG.info ("click Imagine Size");
         principalButtonPage.clickImageSize();
@@ -51,10 +51,22 @@ public class PrincipalButtonTest extends BaseTest {
         LOG.info("click 'Adaugare' button");
         principalButtonPage.clickAdaugareCos();
 
-        sleep(15000);
+        sleep(2000);
+
+        LOG.info("Navigate back");
+        principalButtonPage.clickBack();
+
+       // LOG.info("Click Out in Meniul Principal");
+       // principalButtonPage.setClickOut();
+
+        sleep(2000);
 
         LOG.info("click 'Cos' button");
         principalButtonPage.setClickCosButton();
 
+        sleep(3000);
+
+        LOG.info("is Produs in Cos");
+        Assert.assertTrue(principalButtonPage.isVizualizareCosDisplayed(), "Produs is not displayed");
     }
 }
