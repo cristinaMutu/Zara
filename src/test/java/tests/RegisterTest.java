@@ -51,7 +51,7 @@ public class RegisterTest extends BaseTest {
 
 
         LOG.info("Accept politica");
-        registerPage.setAcceptPolitica();
+        registerPage.clickOnAcceptCheckBox();
         registerPage.setCreareCont();
 
         sleep (5000);

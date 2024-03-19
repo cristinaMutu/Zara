@@ -1,6 +1,8 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -65,12 +67,12 @@ public class RegisterPage extends BasePage {
         driver.findElement(enterTelefon).sendKeys(telefon);
     }
 
-    //public void clickOnAcceptCheckBox() {
-    //LOG.info("Click on Accept Check Box");
-    //  WebElement element = driver.findElement(clickAcceptCheckBox);
-    //((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", element);
-    // ((JavascriptExecutor) driver).executeScript("arguments[0].click()", element);
-//}
+    public void clickOnAcceptCheckBox() {
+    LOG.info("Click on Accept Check Box");
+      WebElement element = driver.findElement(acceptPolitica);
+    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", element);
+     ((JavascriptExecutor) driver).executeScript("arguments[0].click()", element);
+}
 
 
     public void setAcceptPolitica() {
