@@ -23,7 +23,7 @@ public class PrincipalButtonPage extends BasePage {
     private static By SelectBestSellers = By.xpath("//a[@data-qa-action='unfold-category']/span[text()='best sellers']");
     private static By selectImageSize = By.xpath("//button[@data-qa-action='view-option-selector-button'][2]");
     private static By SelectRochieSatinata = By.xpath("//a[@data-qa-action='product-click']/h2[contains(text(),'ROCHIE MINI')]");
-    private static By SelectMarime = By.xpath ("//div[text()='XS']");
+    private static By SelectMarime = By.xpath("//div[text()='XS']");
     private static By AdaugareCos = By.xpath("//button[@data-qa-action='add-to-cart']");
     //private static By clickOut = By.xpath("//div[@class='screen-reader-text']");
     private static By clickCosButton = By.xpath("//a[@data-qa-id='layout-header-go-to-cart']/span");
@@ -50,7 +50,7 @@ public class PrincipalButtonPage extends BasePage {
         driver.findElement(SelectBestSellers).click();
     }
 
-    public void clickImageSize(){
+    public void clickImageSize() {
         LOG.info("Slect Image size");
         driver.findElement(selectImageSize).click();
     }
@@ -65,27 +65,27 @@ public class PrincipalButtonPage extends BasePage {
         driver.findElement(SelectMarime).click();
     }
 
-    public void clickAdaugareCos(){
+    public void clickAdaugareCos() {
         LOG.info("Click 'Adaugare' button");
         driver.findElement(AdaugareCos).click();
     }
 
-   // public void setClickOut() {
-       // LOG.info("Click Out in Meniu Principal");
-       // driver.findElement(clickOut).click();
-   // }
+    // public void setClickOut() {
+    // LOG.info("Click Out in Meniu Principal");
+    // driver.findElement(clickOut).click();
+    // }
 
     public void clickBack() {
         LOG.info("Click back in broswer");
         driver.navigate().back();
     }
 
-    public void setClickCosButton(){
+    public void setClickCosButton() {
         LOG.info("Click 'Cos' button");
         driver.findElement(clickCosButton).click();
     }
 
-    public boolean isVizualizareCosDisplayed(){
+    public boolean isVizualizareCosDisplayed() {
         LOG.info("Is produs in Cos");
         return driver.findElement(vizualizareCos).isDisplayed();
     }

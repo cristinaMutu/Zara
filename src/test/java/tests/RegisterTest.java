@@ -31,7 +31,6 @@ public class RegisterTest extends BaseTest {
 
         sleep(5000);
 
-
         LOG.info("Click 'Inregistrativa' button");
         registerPage.clickInregistrativaButton();
 
@@ -44,17 +43,16 @@ public class RegisterTest extends BaseTest {
         LOG.info("Typing Nume");
         registerPage.typeInNumeField(nume);
         registerPage.typeInNumeFamilieField(numeF);
-    //    registerPage.typeInPrefixField(prefix);
+        //    registerPage.typeInPrefixField(prefix);
         registerPage.typeInTelefonField(telefon);
 
         sleep(3000);
-
 
         LOG.info("Accept politica");
         registerPage.clickOnAcceptCheckBox();
         registerPage.setCreareCont();
 
-        sleep (5000);
+        sleep(5000);
 
 
     }

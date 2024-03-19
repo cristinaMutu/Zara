@@ -4,8 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.PrincipalButtonPage;
-import static pages.BasePage.*;
+
+import static pages.BasePage.sleep;
 
 public class PrincipalButtonTest extends BaseTest {
 
@@ -34,7 +34,7 @@ public class PrincipalButtonTest extends BaseTest {
         principalButtonPage.clickBestSellers();
         sleep(2000);
 
-        LOG.info ("click Imagine Size");
+        LOG.info("click Imagine Size");
         principalButtonPage.clickImageSize();
 
         sleep(3000);
@@ -56,8 +56,8 @@ public class PrincipalButtonTest extends BaseTest {
         LOG.info("Navigate back");
         principalButtonPage.clickBack();
 
-       // LOG.info("Click Out in Meniul Principal");
-       // principalButtonPage.setClickOut();
+        // LOG.info("Click Out in Meniul Principal");
+        // principalButtonPage.setClickOut();
 
         sleep(2000);
 

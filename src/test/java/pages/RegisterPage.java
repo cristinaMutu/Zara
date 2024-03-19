@@ -68,12 +68,11 @@ public class RegisterPage extends BasePage {
     }
 
     public void clickOnAcceptCheckBox() {
-    LOG.info("Click on Accept Check Box");
-      WebElement element = driver.findElement(acceptPolitica);
-    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", element);
-     ((JavascriptExecutor) driver).executeScript("arguments[0].click()", element);
-}
-
+        LOG.info("Click on Accept Check Box");
+        WebElement element = driver.findElement(acceptPolitica);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", element);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click()", element);
+    }
 
     public void setAcceptPolitica() {
         LOG.info("Click accept");
