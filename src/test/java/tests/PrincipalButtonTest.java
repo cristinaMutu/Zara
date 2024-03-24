@@ -56,9 +56,6 @@ public class PrincipalButtonTest extends BaseTest {
         LOG.info("Navigate back");
         principalButtonPage.clickBack();
 
-        // LOG.info("Click Out in Meniul Principal");
-        // principalButtonPage.setClickOut();
-
         sleep(2000);
 
         LOG.info("click 'Cos' button");

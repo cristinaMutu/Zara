@@ -26,7 +26,6 @@ public class RegisterPage extends BasePage {
     private static By enterPassword = By.xpath("//input[@data-qa-input-qualifier='password']");
     private static By enterNume = By.xpath("//input[@data-qa-input-qualifier='firstName']");
     private static By enterNumeFamilie = By.xpath("//input[@data-qa-input-qualifier='lastName']");
-    // private static By enterPrefix = By.xpath("//input[@name='phone.prefix']");
     private static By enterTelefon = By.xpath("//input[@type='tel']");
     private static By acceptPolitica = By.xpath("//div[@data-name='privacyCheck']//span[@class='zds-checkbox-control']");
     private static By creareCont = By.xpath("//button[@role='button']");
@@ -56,11 +55,6 @@ public class RegisterPage extends BasePage {
         LOG.info("Typing NumeFamilie in 'NumeFamilie' field");
         driver.findElement(enterNumeFamilie).sendKeys(numeF);
     }
-
-    // public void typeInPrefixField(String prefix) {
-    //   LOG.info("Typing Prefix in 'Prefix' field");
-    //  driver.findElement(enterPrefix).sendKeys(prefix);
-    //}
 
     public void typeInTelefonField(String telefon) {
         LOG.info("Typing Telefon in 'Telefon' field");
